@@ -1,0 +1,75 @@
+Introducción a los preprocesadores
+
+	Un preprocesador es una herramienta que nos permite escribir pseudocódigo de forma modular, más fácil de reusar, leer, y mantener. pseudocódigo que después será convertido a CSS o HTML estándar que el navegador entiende.
+
+	Gracias a los preprocesadores podemos extender las características de CSS y HTML al nivel de otros lenguajes de programación, permitiéndonos usar características como variables, funciones y mixins.
+
+	Elementos de un preprocesador:
+		- Variables: Pedazo de memoria reservado para almacenar un valor, correpondiente a un tipo de dato.
+
+		- Funciones.
+
+		- Mixin: es una clase cuya finalidad es ofrecer una funcionalidad que pueda ser reutilizada en otras clases pero que no está pensada para usarse de forma autónoma.
+
+	¿Por qué utilizarlos?
+		- Te salva tiempo y dinero al tener la opción de reusar código.
+		- Tener un código más sencillo de mantener y editar.
+		- Modularizar nuestros proyectos de una forma lógica y sencilla.
+
+************************************************************************
+Metodologías para estructurar código
+
+	Las metodologías para estructurar código son sistemas preestablecidos, formales y bien documentados, que te ayudan a escribir y organizar código mantenible y escalable en sistemas grandes y complejos.
+
+	Ventajas:
+		- Evita redundancia al crear componentes escalables y reutilizables.
+		- Evita el mal uso de propiedades como !important.
+		- Solucionar problemas de manejo de sistemas grandes y complejos.
+
+	La metodolgía más conocida y que tiene más satisfacción entre los desarrolladores FrontEnd es BEM.
+	
+************************************************************************
+Introducción a BEM
+
+	BEM es la metodología que vamos a usar a lo largo del curso. El objetivo de BEM es dividir lógicamente las piezas de las que se compone una web.
+
+	BEM establece que debemos usar clases para nuestro selectores, clases que se dividen en:
+
+		- Bloques. Los bloques son nuestros contenedores más grandes que a su vez contienen elementos u otros bloques. Ejemplo: menú de navegación.
+			.bloque {}
+
+		- Elementos. Los elementos siempre forman parte de un bloque, normalmente son los botones, textos, imágenes etc. Ejemplo: botones y logos que formen parte del encabezado.
+			.bloque__elemento {}
+
+		- Modificadores. Los modificadores se usan para establecer estilos diferentes a un mismo bloque o elemento, son modificaciones de los elementos. Ejemplo: botones, pueden variar, algunos tiene borde, otros tienen texto, otros tienen íconos, etc.
+			.bloque--modificador.
+
+		Ejemplo:
+			Tienes una galería para una página web, la galería consta de fotos con su respectiva información.
+			La galería es un bloque.
+			Las fotos son elementos.
+			La foto puede ser rectangular o circular.
+			El modificador es que está en forma circular.
+
+			.galeria {}
+			.galeria__foto {}
+			.galeria__foto--circular {}
+
+	Ventajas de BEM:
+		- Menos repetición.
+		- Los bloques tienen independencia absoluta.
+		- Mejoría en la herencia múltiple.
+		- Evitar la especificidad(no hay necesidad de usar !important).
+
+************************************************************************
+Guías para creación y mantenimiento de código
+
+	La meta de tener una guía de código es hacer que luzca como si una sola persona lo haya escrito para que se entendible por todo el equipo.
+
+	Para nuestro proyecto vamos a tener una guía en la que definimos:
+
+		- Ser consistentes con la indentación.
+		- Consistencia con espacios, corchetes, puntos y comas.
+		- Consistencia de números, de selectores y divisiones.
+		- Agrupaciones de propiedades.
+		- Uso de ID’s y clases.
