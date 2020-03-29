@@ -1,38 +1,18 @@
--var titulo = "Título Principal"
--var titulos =  ["Título Principal", "Subtítulo 1", "Subtítulo 2", "Subtítulo 3"]
--var usuario = "Armando"
--var content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmo"
-mixin caja(imagen, title, contenido)
-	.caja
-		.caja__imagen: img(src="images/"+imagen)
-		.caja__contenido
-			h3 #{title}
-			p #{contenido}
-doctype html
-html
-	head
-		meta(charset="UTF-8")
-		link(rel="stylesheet", href="css/ejercicio-pug.css")
-	body
-		header
-			h1 Galería
-			if usuario
-				a Hola #{usuario}
-			else
-				a.boton Registro
-		section.intro
-			div.intro__imagen: img(src="images/imagen.png")
-			div.intro__contenido
-				h2 #{titulos[0]}
-				p Lorem nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-					span Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-				a.boton Leer Mas
-		main.contenido
-			+caja('imagen.png', titulos[1], content)
-			+caja('imagen.png', titulos[2], content)
-			+caja('imagen.png', titulos[3], content)
+extend components/template.pug
+block contenidos
+	section.intro
+		div.intro__imagen: img(src="images/imagen.png")
+		div.intro__contenido
+			h2 #{titulos[0]}
+			p Lorem nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				span Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			a.boton Leer Mas
+	main.contenido
+		+caja('imagen.png', titulos[1], content)
+		+caja('imagen.png', titulos[2], content)
+		+caja('imagen.png', titulos[3], content)
 
 
-		ul
-			each title in titulos
-				li=title
+	ul
+		each title in titulos
+			li=title
