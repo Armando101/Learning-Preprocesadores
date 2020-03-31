@@ -28,6 +28,7 @@
 	&__categoria {
 		font-family: @Fuente2;
 		text-transform: uppercase;
+		color: fade(@color-claro, 50%);
 	}
 
 	&__titulo {
@@ -52,9 +53,12 @@
 			padding-right: 10px;
 			border-radius: 10em;
 		}
-	}
+		span {
+			display: inline-block;
+		}
 
-	span {
-		display: inline-block;
+		&-titulo {
+			color: fade(@color-claro, 50%);
+		}
 	}
 }
