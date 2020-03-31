@@ -1,3 +1,7 @@
+// Modo oscuro
+@darkMode: false;
+@background-dark: #333;
+
 // Colores
 @color-primario: #333;
 @color-claro: #FFF;
@@ -34,10 +38,15 @@ body {
 	color: @color-primario;
 	.fuente(@Fuente-base);
 
+	background-color:if((@darkMode), @background-dark);
 
 }
 
 h1,h2,h3 {
 	font-family: @Fuente2;
 	.Oswald;
+}
+
+h2 {
+	color: if((@darkMode), @color-secundario);
 }

@@ -1,6 +1,6 @@
 .contenedor--cajas {
 	width: 1400px;
-	margin: 0 auto;
+	margin: if((@darkMode), 25px auto, 0 auto);
 	display: flex;
 	justify-content: space-evenly;
 }
@@ -8,20 +8,25 @@
 .caja {
 	max-width: 430px;
 	.sombra-caja;
-
+	color: if((@darkMode), @color-claro);
 	&__contenido {
 		padding: 24px;
-		background-color: @color-claro;
+		background-color: if((@darkMode), @color-secundario, @color-claro);
 	}
 
 	span {
-		color: @color-secundario;
 		.Oswald;
+		color: if((@darkMode), @color-claro,  @color-secundario);
 	}
 
 	a {
 		text-decoration: none;
 		color: @color-variacion;
 		.Oswald;
+		color: if((@darkMode), @color-claro);
+	}
+	
+	h3 {
+		font-size: 25px;
 	}
 }
