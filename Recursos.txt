@@ -1,2 +1,5 @@
 Funciones en Less:
 	http://lesscss.org/functions/#functions-overview
+
+Funciones en Stylus:
+	https://stylus-lang.com/docs/bifs.html
